@@ -1,18 +1,8 @@
-SELECT
-	*
-FROM
-	h_mar h
-	, h_med hm
-WHERE
-	h.person_id = 3
-and
-	h.active_ind = 1
-and
-	hm.id = h.medication
-
--- order by
-	-- h.admin_dttm desc
-
+/*
+Author: Robert Holland
+Date: 2014-11-28 16:30:24
+Purpose: Show administered medications.
+*/
 
 SELECT
 	concat(hp.firstname, " ", hp.lastname) name
