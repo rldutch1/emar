@@ -31,13 +31,5 @@ order by
 
 
 /*
-SELECT Orders.OrderID, Customers.CustomerName, Orders.OrderDate
-FROM Orders
-INNER JOIN Customers
-ON Orders.CustomerID=Customers.CustomerID;
-
-JOIN: Return rows when there is at least one match in both tables
-LEFT JOIN: Return all rows from the left table, even if there are no matches in the right table
-RIGHT JOIN: Return all rows from the right table, even if there are no matches in the left table
-FULL JOIN: Return rows when there is a match in one of the tables
+vw_healthmar shows the same information
 */
