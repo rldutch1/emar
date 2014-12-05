@@ -1,2 +1,1 @@
-Need to create the insert into for the h_temp and h_mar tables.
-
+The online version is missing the active indicator for the person table and probably a few other tables. 
