@@ -3,18 +3,12 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 30, 2014 at 05:31 PM
+-- Generation Time: Dec 05, 2014 at 06:37 AM
 -- Server version: 5.5.36-cll-lve
--- PHP Version: 5.5.17
+-- PHP Version: 5.5.18
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: `robdba5`
@@ -34,7 +28,7 @@ CREATE TABLE IF NOT EXISTS `h_temp` (
   `temp_dttm` datetime NOT NULL,
   `active_ind` int(11) NOT NULL DEFAULT '1',
   `symptom` varchar(200) NOT NULL DEFAULT '--'
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=55 ;
+) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=62 ;
 
 --
 -- Dumping data for table `h_temp`
@@ -94,7 +88,14 @@ INSERT INTO `h_temp` (`id`, `temp_f`, `person_id`, `temp_dttm`, `active_ind`, `s
 (51, 0, 3, '2014-10-17 15:38:00', 0, 'Sore throat'),
 (52, 97.7, 5, '2014-10-19 12:00:00', 1, 'Stomach ache'),
 (53, 98.4, 5, '2014-11-28 14:22:11', 1, 'No appetite. '),
-(54, 99.2, 2, '2014-11-29 17:55:00', 1, 'Headache');
+(54, 99.2, 2, '2014-11-29 17:55:00', 1, 'Headache'),
+(55, 97.6, 4, '2014-12-02 07:40:00', 1, 'Ichy throat.'),
+(56, 97.7, 3, '2014-12-02 07:55:00', 1, 'Body ache'),
+(57, 99.9, 3, '2014-12-02 13:11:00', 1, 'Fever, Headache'),
+(58, 100.9, 3, '2014-12-02 17:00:00', 1, 'Fever, Headache'),
+(59, 98.7, 3, '2014-12-02 19:30:00', 1, 'Slight fever'),
+(60, 100.1, 3, '2014-12-03 15:08:00', 1, '--'),
+(61, 99.6, 3, '2014-12-03 20:08:00', 1, 'Fever');
 
 --
 -- Indexes for dumped tables
@@ -114,7 +115,4 @@ ALTER TABLE `h_temp`
 -- AUTO_INCREMENT for table `h_temp`
 --
 ALTER TABLE `h_temp`
-MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=55;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=62;

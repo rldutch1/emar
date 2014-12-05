@@ -3,18 +3,12 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Nov 30, 2014 at 05:31 PM
+-- Generation Time: Dec 05, 2014 at 06:38 AM
 -- Server version: 5.5.36-cll-lve
--- PHP Version: 5.5.17
+-- PHP Version: 5.5.18
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: `robdba5`
@@ -38,13 +32,13 @@ CREATE TABLE IF NOT EXISTS `h_unit` (
 --
 
 INSERT INTO `h_unit` (`id`, `unit`, `active_ind`) VALUES
-(1, 'mg', 1),
+(1, 'None', 1),
 (2, 'mcg', 1),
 (3, 'mL', 1),
 (4, 'tsp', 1),
 (5, 'TBS', 1),
 (6, 'gtt', 1),
-(7, 'None', 1);
+(7, 'mg', 1);
 
 --
 -- Indexes for dumped tables
@@ -65,6 +59,3 @@ ALTER TABLE `h_unit`
 --
 ALTER TABLE `h_unit`
 MODIFY `id` int(11) unsigned NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
