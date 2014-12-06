@@ -1,0 +1,10 @@
+-- Create user database.
+CREATE DATABASE emar;
+-- Create local user.
+CREATE USER 'emar'@'localhost' IDENTIFIED BY 'emar';
+GRANT ALL PRIVILEGES ON emar.* TO 'emar'@'localhost' WITH GRANT OPTION;
+-- Create remote user.
+CREATE USER 'emar'@'%' IDENTIFIED BY 'emar';
+GRANT ALL PRIVILEGES ON emar.* TO 'emar'@'%' WITH GRANT OPTION;
+-- Tell the server to reload the GRANT TABLES.
+FLUSH PRIVILEGES;
