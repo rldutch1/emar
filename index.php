@@ -23,11 +23,11 @@ $namequery="select
 				from
 					h_person
 				where active_ind = 1
-				order by id;";
+				order by firstname, lastname;";
 		$nameresult=mysqli_query($con, $namequery);
 			confirm_queryi($nameresult);
 		$arraydata1 = array();
-
+			echo "<option selected='selected' value='1'>Patient Name</option>";
 			while($row = mysqli_fetch_array($nameresult)){
 			echo "<option value='" . $row[0] . "'>" . $row[1] . "</option>";
 			}
@@ -40,11 +40,12 @@ $medquery="select
 				from
 					h_med
 				where active_ind = 1
-				order by id;";
+				and id > 1
+				order by medication;";
 		$medresult=mysqli_query($con, $medquery);
 			confirm_queryi($medresult);
 		$arraydata1 = array();
-
+			echo "<option selected='selected' value='1'>None Given</option>";
 			while($row = mysqli_fetch_array($medresult)){
 			echo "<option value='" . $row[0] . "'>" . $row[1] . "</option>";
 			}
@@ -59,11 +60,13 @@ $unitquery="select
 				from
 					h_unit
 				where active_ind = 1
-				order by id;";
+				and id > 1
+				order by unit;";
 		$unitresult=mysqli_query($con, $unitquery);
 			confirm_queryi($unitresult);
 		$arraydata1 = array();
 
+			echo "<option selected='selected' value='1'>None</option>";
 			while($row = mysqli_fetch_array($unitresult)){
 			echo "<option value='" . $row[0] . "'>" . $row[1] . "</option>";
 			}
