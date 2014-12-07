@@ -8,6 +8,14 @@ echo "<html>
 <head>
 <title></title>
 <script type='text/javascript' src='iview_list.js'></script>
+<script src='http://code.jquery.com/jquery-latest.min.js'></script>
+<script type='text/javascript' src='js/jquery-ui-1.10.3.custom.js'></script>
+<script type='text/javascript'>
+		$('document').ready(function(){
+			$('#datepickerID').datepicker({dateFormat: 'yy-mm-dd'})
+			});
+</script>
+<link rel='stylesheet' type='text/css' href='css/jquery-ui-1.10.3.custom.css'>
 </head><body>";
 
 echo "<form name='p_list' action='iview_list.php' method='post'>";
@@ -74,7 +82,7 @@ $unitquery="select
 
 echo "<input type='text' id='temperature' name='temperature' />";
 
-echo "<input type='date' id='admindate' name='admindate' />";
+echo "<input type='text' id='datepickerID' name='admindate' />";
 
 echo "<input type='text' id='symptom' name='symptom' />";
 
