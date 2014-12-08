@@ -82,7 +82,8 @@ $unitquery="select
 
 echo "<input type='text' id='temperature' name='temperature' />";
 
-echo "<input type='text' id='datepickerID' name='admindate' />";
+//echo "<input type='text' id='datepickerID' name='admindate' />";
+echo "<input type='text' id='basic_example_1' name='basic_example_1' />";
 
 echo "<input type='text' id='symptom' name='symptom' />";
 
@@ -193,7 +194,7 @@ the term being found multiple times in the same file and the filename being gene
 After removing the duplicate files only 138 files remained. 100 terms remained (meaning I could not find 38 terms).
 			echo "</form>";
 */
-
+include('jsfooter.php');
 			echo "</body></html>";
 ?>
 
