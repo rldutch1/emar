@@ -7,10 +7,10 @@ include('../../includes/functions.php');
 echo "<html>
 <head>
 <title></title>
-<script src='http://code.jquery.com/jquery-latest.min.js'></script>
-<script type='text/javascript' src='js/jquery-ui-1.10.3.custom.js'></script>
+
 
 <link rel='stylesheet' type='text/css' href='css/jquery-ui-1.10.3.custom.css'>
+<link rel='stylesheet' type='text/css' href='css/script.css'>
 </head><body>";
 echo "<br /><hr /><table><tr><th>Patient Name</th><th>Medication</th><th>Dose</th><th>Unit</th><th>Temperature (F)</th><th>Administration Date Time</th><th>Symptoms</th><th></th></tr>";
 echo "<form name='p_list' action='emar_post.php' method='post'>";
@@ -77,8 +77,8 @@ $unitquery="select
 
 echo "<td><input type='text' id='temperature' name='temperature' /></td>";
 
-//echo "<input type='text' id='datepickerID' name='admindate' />";
-echo "<td><input type='text' id='basic_example_1' name='basic_example_1' /></td>";
+echo "<td><input type='text' id='admindate' name='admindate' /></td>";
+//echo "<td><input type='text' id='basic_example_1' name='basic_example_1' /></td>";
 
 echo "<td><input type='text' id='symptom' name='symptom' /></td>";
 
