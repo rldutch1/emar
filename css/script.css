@@ -1,6 +1,7 @@
 /*http://jsfiddle.net/IrvinDominin/6FGgA/*/
 /* css for timepicker */
- .ui-timepicker-div .ui-widget-header {
+
+.ui-timepicker-div .ui-widget-header {
     margin-bottom: 8px;
 }
 .ui-timepicker-div dl {
