@@ -10,7 +10,7 @@ echo "<html>
 
 
 <link rel='stylesheet' type='text/css' href='css/jquery-ui-1.10.3.custom.css'>
-<link rel='stylesheet' type='text/css' href='css/script.css'>
+<link rel='stylesheet' type='text/css' href='css/emar.css'>
 </head><body>";
 echo "<br /><hr /><table><tr><th>Patient Name</th><th>Medication</th><th>Dose</th><th>Unit</th><th>Temperature (F)</th><th>Administration Date Time</th><th>Symptoms</th><th></th></tr>";
 echo "<form name='p_list' action='emar_post.php' method='post'>";
