@@ -1,8 +1,8 @@
--- MySQL dump 10.14  Distrib 5.5.39-MariaDB, for Linux (i686)
+-- MySQL dump 10.13  Distrib 5.6.20, for osx10.8 (x86_64)
 --
 -- Host: localhost    Database: emar
 -- ------------------------------------------------------
--- Server version	5.5.39-MariaDB
+-- Server version	5.6.20
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -93,7 +93,7 @@ CREATE TABLE `h_med_ingredients` (
 
 LOCK TABLES `h_med_ingredients` WRITE;
 /*!40000 ALTER TABLE `h_med_ingredients` DISABLE KEYS */;
-INSERT INTO `h_med_ingredients` (`id`, `h_med_id`, `ingredients`, `Type`) VALUES (1,9,'600 mg guaifenesin, 30 mg dextromethorphan HBr','Expectorant and Cough Suppressant'),(2,10,'Acetaminophen 325mg, Dextromethorphan HBr 10mg, Guaifenesin 100mg, Phenylephrine HCl 5mg.',NULL),(3,11,'Citirizine Hydrochloride Tablets 10mg','Antihistamine');
+INSERT INTO `h_med_ingredients` (`id`, `h_med_id`, `ingredients`, `Type`) VALUES (1,9,'600 mg guaifenesin, 30 mg dextromethorphan HBr','Expectorant and Cough Suppressant'),(2,10,'Acetaminophen 325mg, Dextromethorphan HBr 10mg, Guaifenesin 100mg, Phenylephrine HCl 5mg.','Decongestant'),(3,11,'Citirizine Hydrochloride Tablets 10mg','Antihistamine');
 /*!40000 ALTER TABLE `h_med_ingredients` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -182,42 +182,39 @@ INSERT INTO `h_unit` (`id`, `unit`, `active_ind`) VALUES (1,'None/Missed Dose',1
 UNLOCK TABLES;
 
 --
--- Temporary table structure for view `vw_healthmar`
+-- Temporary view structure for view `vw_healthmar`
 --
 
 DROP TABLE IF EXISTS `vw_healthmar`;
 /*!50001 DROP VIEW IF EXISTS `vw_healthmar`*/;
 SET @saved_cs_client     = @@character_set_client;
 SET character_set_client = utf8;
-/*!50001 CREATE TABLE `vw_healthmar` (
-  `person` tinyint NOT NULL,
-  `medication` tinyint NOT NULL,
-  `dose_unit` tinyint NOT NULL,
-  `date_time` tinyint NOT NULL
-) ENGINE=MyISAM */;
+/*!50001 CREATE VIEW `vw_healthmar` AS SELECT 
+ 1 AS `person`,
+ 1 AS `medication`,
+ 1 AS `dose_unit`,
+ 1 AS `date_time`*/;
 SET character_set_client = @saved_cs_client;
 
 --
--- Temporary table structure for view `vw_temp`
+-- Temporary view structure for view `vw_temp`
 --
 
 DROP TABLE IF EXISTS `vw_temp`;
 /*!50001 DROP VIEW IF EXISTS `vw_temp`*/;
 SET @saved_cs_client     = @@character_set_client;
 SET character_set_client = utf8;
-/*!50001 CREATE TABLE `vw_temp` (
-  `person` tinyint NOT NULL,
-  `celcius` tinyint NOT NULL,
-  `Fahrenheit` tinyint NOT NULL,
-  `date_time` tinyint NOT NULL
-) ENGINE=MyISAM */;
+/*!50001 CREATE VIEW `vw_temp` AS SELECT 
+ 1 AS `person`,
+ 1 AS `celcius`,
+ 1 AS `Fahrenheit`,
+ 1 AS `date_time`*/;
 SET character_set_client = @saved_cs_client;
 
 --
 -- Final view structure for view `vw_healthmar`
 --
 
-/*!50001 DROP TABLE IF EXISTS `vw_healthmar`*/;
 /*!50001 DROP VIEW IF EXISTS `vw_healthmar`*/;
 /*!50001 SET @saved_cs_client          = @@character_set_client */;
 /*!50001 SET @saved_cs_results         = @@character_set_results */;
@@ -236,7 +233,6 @@ SET character_set_client = @saved_cs_client;
 -- Final view structure for view `vw_temp`
 --
 
-/*!50001 DROP TABLE IF EXISTS `vw_temp`*/;
 /*!50001 DROP VIEW IF EXISTS `vw_temp`*/;
 /*!50001 SET @saved_cs_client          = @@character_set_client */;
 /*!50001 SET @saved_cs_results         = @@character_set_results */;
@@ -260,4 +256,4 @@ SET character_set_client = @saved_cs_client;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2014-12-17  9:29:31
+-- Dump completed on 2014-12-17 19:18:50
