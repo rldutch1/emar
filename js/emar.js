@@ -91,11 +91,11 @@ else
 
 var x1 = document.p_list.namequery.value;
 var x2 = document.p_list.medquery.value;
-var x3 = document.p_list.dose.value;
+var x3 = parseFloat(document.p_list.dose.value);
 var x4 = document.p_list.unitquery.value;
 var x5 = document.p_list.admindate.value;
-//var x6 = document.p_list.namequery.value;
-//var x7 = document.p_list.namequery.value;
+var x6 = document.p_list.symptom.value;
+var x7 = parseFloat(document.p_list.temperature.value);
 //var x=document.forms["dataform"]["entryform"].value;
 //if (x1==null || x1=="" || x2==null || x2=="" || x3==null || x3=="" || x4==null || x4=="" "" x5==null || x5=="" || x6==null || x6=="" || x7==null || x7=="" )
 if (x1<1)// || x2==1) || x3==null || x3=="")
@@ -123,8 +123,18 @@ if (x5==null || x5=="")
   alert("Please choose a date and time!");
   return false;
   }
+if (x6==null || x6=="")
+  {
+  alert("Please enter symptom(s)!");
+  return false;
+  }
+if (x7==null || x7=="")
+  {
+  alert("Please enter temperature!");
+  return false;
+  }
 
-alert(x1+" "+x2+" "+x3+" "+x4+" "+x5);//+" "+x4+" "+x5+" "+x6+" "+x7);
+alert(x1+" "+x2+" "+x3+" "+x4+" "+x5+" "+x6+" "+x7);
 
 	var td = document.dataform.entryform.value
 
