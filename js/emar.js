@@ -70,7 +70,7 @@ xmlhttp.close();
 
 }
 
-function putEntry()
+function puth_mar()
 {
 var xmlhttp;
 if (window.XMLHttpRequest)
@@ -89,12 +89,42 @@ else
     }
   }
 
-var x=document.forms["dataform"]["entryform"].value;
-if (x==null || x=="")
+var x1 = document.p_list.namequery.value;
+var x2 = document.p_list.medquery.value;
+var x3 = document.p_list.dose.value;
+var x4 = document.p_list.unitquery.value;
+var x5 = document.p_list.admindate.value;
+//var x6 = document.p_list.namequery.value;
+//var x7 = document.p_list.namequery.value;
+//var x=document.forms["dataform"]["entryform"].value;
+//if (x1==null || x1=="" || x2==null || x2=="" || x3==null || x3=="" || x4==null || x4=="" "" x5==null || x5=="" || x6==null || x6=="" || x7==null || x7=="" )
+if (x1<1)// || x2==1) || x3==null || x3=="")
   {
-  alert("Entry field must not be empty!");
+  alert("Please choose a name!");
   return false;
   }
+if (x2<1)
+  {
+  alert("Please choose a medication!");
+  return false;
+  }
+if (x3==null || x3=="")
+  {
+  alert("Dose must not be empty!");
+  return false;
+  }
+if (x4<1)
+  {
+  alert("Please choose a unit!");
+  return false;
+  }
+if (x5==null || x5=="")
+  {
+  alert("Please choose a date and time!");
+  return false;
+  }
+
+alert(x1+" "+x2+" "+x3+" "+x4+" "+x5);//+" "+x4+" "+x5+" "+x6+" "+x7);
 
 	var td = document.dataform.entryform.value
 

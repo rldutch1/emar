@@ -12,7 +12,7 @@ echo "<html>
 <link rel='stylesheet' type='text/css' href='css/jquery-ui-1.10.3.custom.css'>
 <link rel='stylesheet' type='text/css' href='css/emar.css'>
 </head><body>";
-echo "<br /><hr /><table><tr><th>Patient Name</th><th>Medication</th><th>Dose</th><th>Unit</th><th>Temperature (F)</th><th>Administration Date Time</th><th>Symptoms</th><th></th></tr>";
+echo "<br /><hr /><table border='1'><tr><th>Patient Name</th><th>Medication</th><th>Dose</th><th>Unit</th><th>Date Time Given</th><th>Symptoms</th><th>Temperature (F)</th><th></th></tr>";
 echo "<form name='p_list' action='emar_post.php' method='post'>";
 
 echo "<tr><td><select id='namequery' name='namequery'>";
@@ -30,7 +30,7 @@ $namequery="select
 		$nameresult=mysqli_query($con, $namequery);
 			confirm_queryi($nameresult);
 		$arraydata1 = array();
-			echo "<option selected='selected' value='1'>Select</option>";
+			echo "<option selected='selected' value='0'>Select</option>";
 			while($row = mysqli_fetch_array($nameresult)){
 			echo "<option value='" . $row[0] . "'>" . $row[1] . "</option>";
 			}
@@ -48,7 +48,7 @@ $medquery="select
 		$medresult=mysqli_query($con, $medquery);
 			confirm_queryi($medresult);
 		$arraydata1 = array();
-			echo "<option selected='selected' value='1'>None Given</option>";
+			echo "<option selected='selected' value='0'>None Given</option>";
 			while($row = mysqli_fetch_array($medresult)){
 			echo "<option value='" . $row[0] . "'>" . $row[1] . "</option>";
 			}
@@ -69,20 +69,20 @@ $unitquery="select
 			confirm_queryi($unitresult);
 		$arraydata1 = array();
 
-			echo "<option selected='selected' value='1'>None</option>";
+			echo "<option selected='selected' value='0'>None</option>";
 			while($row = mysqli_fetch_array($unitresult)){
 			echo "<option value='" . $row[0] . "'>" . $row[1] . "</option>";
 			}
 			echo "</select></td>";
 
-echo "<td><input type='text' id='temperature' name='temperature' /></td>";
-
-echo "<td><input type='text' id='admindate' name='admindate' /></td>";
+echo "<td><input type='text' id='admindate' name='admindate' size='30' /></td>";
 //echo "<td><input type='text' id='basic_example_1' name='basic_example_1' /></td>";
 
 echo "<td><input type='text' id='symptom' name='symptom' /></td>";
 
-echo "<td><button type='button' name='prg_name' onclick='emarlist()'>Submit</button></td></tr></form>";
+echo "<td><input type='text' id='temperature' name='temperature' /></td>";
+
+echo "<td><button type='button' name='prg_name' onclick='puth_mar()'>Submit</button></td></tr></form>";
 
 echo "</table><br /><hr />";
 
