@@ -80,7 +80,7 @@ echo "<td><input type='text' id='admindate' name='admindate' size='30' /></td>";
 
 echo "<td><input type='text' id='symptom' name='symptom' /></td>";
 
-echo "<td><input type='text' id='temperature' name='temperature' /></td>";
+echo "<td title='Enter zero if temperature not taken.'><input type='text' id='temperature' name='temperature' /></td>";
 
 echo "<td><button type='button' name='prg_name' onclick='puth_mar()'>Submit</button></td></tr></form>";
 
