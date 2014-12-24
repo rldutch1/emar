@@ -1,6 +1,8 @@
 /*
   jQuery Document ready
 */
+
+//Datepicker dropdown.
 $(function()
 {
 	$('#admindate').datetimepicker(
@@ -13,7 +15,7 @@ $(function()
 });
 
 	/*
-		below code just enable time picker.
+		enable code below just to enable the time picker.
 	*/
 //	$('#basic_example_2').timepicker();
 });
@@ -70,6 +72,7 @@ xmlhttp.close();
 
 }
 
+//Send data to h_mar table.
 function puth_mar()
 {
 var xmlhttp;
@@ -128,20 +131,25 @@ if (x6==null || x6=="")
   alert("Please enter symptom(s)!");
   return false;
   }
-if (x7==null || x7=="")
+if (x7==0){
+	x7='00.0';
+	}
+else if (isNaN(x7)==true || x7 < 0 || x7 == "")
   {
-  alert("Please enter temperature!");
+  alert("Please enter valid temperature or enter zero if temperature not taken! ");
   return false;
   }
-
 alert(x1+" "+x2+" "+x3+" "+x4+" "+x5+" "+x6+" "+x7);
 
 	var td = document.dataform.entryform.value
 
 //	xmlhttp.open("POST","../php/journalsubmit.php",true);
-	xmlhttp.open("POST","../journalsubmit.php",true);
+	xmlhttp.open("POST","../emar_post.php",true);
 	xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
-	xmlhttp.send("entryform="+x+""); //Send the input from the HTML to the php file listed in the xmlhttp.open function.
+	xmlhttp.send("entryform="+x1+x2+x3+x4+x5+x6+x7+""); //Send the input from the HTML to the php file listed in the xmlhttp.open function.
 	xmlhttp.close();
-
+// xyzpdq1 = document.formname.elementname.value
+// xyzpdq2 = document.formname.nextelementname.value
+//xmlhttp.send("elementname="+xyzpdq1+"&nextelementname="+xyzpdq2+"");
+//Example: http://www.robholland.com/disneymovies.html
 }
