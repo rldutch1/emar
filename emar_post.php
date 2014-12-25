@@ -1,4 +1,13 @@
+<?php
 include('connect.php');
 include('../../includes/functions.php');
 
-"UEStudio Beta"
+if ($_POST['username'])
+namequery
+medquery
+dose
+unitquery
+admindate
+symptom
+temperature
+?>
