@@ -139,7 +139,7 @@ else if (isNaN(x7)==true || x7 < 0 || x7 == "")
   alert("Please enter valid temperature or enter zero if temperature is not taken! ");
   return false;
   }
-alert(x1+" "+x2+" "+x3+" "+x4+" "+x5+" "+x6+" "+x7);
+//alert(x1+" "+x2+" "+x3+" "+x4+" "+x5+" "+x6+" "+x7);
 
 //	xmlhttp.open("POST","../php/journalsubmit.php",true);
 	xmlhttp.open("POST","../emar_post.php",true);
