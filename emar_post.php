@@ -12,5 +12,5 @@ $x7 = $_POST['temperature'];
 
 echo   $x1 . " " . $x2 . " " . $x3 . " " . $x4 . " " . $x5 . " " . $x6 . " " . $x7;
 
-
+echo "Hello World!". $_POST['namequery'];
 ?>

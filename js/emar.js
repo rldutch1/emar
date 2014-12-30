@@ -146,6 +146,7 @@ else if (isNaN(x7)==true || x7 < 0 || x7 == "")
 	xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 //	xmlhttp.send("entryform="+x1+x2+x3+x4+x5+x6+x7+""); //Send the input from the HTML to the php file listed in the xmlhttp.open function.
 	xmlhttp.send("namequery="+x1+"&medquery="+x2+"&dose="+x3+"&unitquery="+x4+"&admindate="+x5+"&symptom="+x6+"&temperature="+x7+"");
+//	alert("namequery="+x1+"&medquery="+x2+"&dose="+x3+"&unitquery="+x4+"&admindate="+x5+"&symptom="+x6+"&temperature="+x7+"");
 	xmlhttp.close();
 /*
 
