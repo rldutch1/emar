@@ -1,3 +1,7 @@
+drop database if exists emar;
+create database emar;
+use emar;
+
 -- MySQL dump 10.14  Distrib 5.5.40-MariaDB, for Linux (i686)
 --
 -- Host: localhost    Database: emar
