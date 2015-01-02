@@ -28,7 +28,7 @@ if (mysqli_query($con, $query)) {
 
 		$query2="insert into h_temp (temp_f, person_id, temp_dttm, symptom, hm_id) values ($x7, $x1, '" . $x5 . "', '" . $x6 . "', $last_id);";
 
-		if (mysqli_query($con, $query2)) { echo $q1 . "ID: " . $last_id;}
+		if (mysqli_query($con, $query2)) { echo $q1 . "ID: " . $last_id . "<br />Query for online EMAR: " . $query2;}
 
 } else {
     echo "Error: " . $query . "<br>" . mysqli_error($con);
