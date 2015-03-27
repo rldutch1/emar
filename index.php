@@ -1,7 +1,7 @@
 <?php
 //include('../includes/pw5new.php');
 include('connect.php');
-include('../../includes/functions.php');
+include('../php/includes/functions.php');
 
 //echo "\r\n <br /> Holland \r\n <br />";
 echo "<html>
