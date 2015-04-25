@@ -1,6 +1,6 @@
 <?php
 include('connect.php');
-include('../../includes/functions.php');
+include('../php1/includes/functions.php');
 
 $x1 = $_POST['namequery'];
 $x2 = $_POST['medquery'];

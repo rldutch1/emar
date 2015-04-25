@@ -1,7 +1,7 @@
 <?php
 //include('../includes/pw5new.php');
 include('connect.php');
-include('../../includes/functions.php');
+include('../php1/includes/functions.php');
 
 //echo "\r\n <br /> Holland \r\n <br />";
 echo "<html>
@@ -43,18 +43,17 @@ $medquery="select
 				from
 					h_med
 				where active_ind = 1
-				and id > 1
 				order by medication;";
 		$medresult=mysqli_query($con, $medquery);
 			confirm_queryi($medresult);
 		$arraydata1 = array();
-			echo "<option selected='selected' value='0'>None Given</option>";
+			echo "<option selected='selected' value='0'>Select Medication</option>";
 			while($row = mysqli_fetch_array($medresult)){
 			echo "<option value='" . $row[0] . "'>" . $row[1] . "</option>";
 			}
 			echo "</select></td>";
 
-echo "<td><input type='text' id='dose' name='dose' /></td>";
+echo "<td><input type='text' id='dose' name='dose' value='' /></td>";
 
 echo "<td><select id='unitquery' name='unitquery'>";
 $unitquery="select
@@ -63,13 +62,12 @@ $unitquery="select
 				from
 					h_unit
 				where active_ind = 1
-				and id > 1
 				order by unit;";
 		$unitresult=mysqli_query($con, $unitquery);
 			confirm_queryi($unitresult);
 		$arraydata1 = array();
 
-			echo "<option selected='selected' value='0'>None</option>";
+			echo "<option selected='selected' value='0'>Select Unit</option>";
 			while($row = mysqli_fetch_array($unitresult)){
 			echo "<option value='" . $row[0] . "'>" . $row[1] . "</option>";
 			}
