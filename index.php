@@ -12,7 +12,7 @@ echo "<html>
 <link rel='stylesheet' type='text/css' href='css/jquery-ui-1.10.3.custom.css'>
 <link rel='stylesheet' type='text/css' href='css/emar.css'>
 </head><body>";
-echo "<br /><hr /><table border='1'><tr><th>Patient Name</th><th>Medication</th><th>Dose</th><th>Unit</th><th>Date Time Given</th><th>Symptoms</th><th>Temperature (F)</th><th></th></tr>";
+echo "<br /><hr /><table border='1'><caption><a href='http://www.robholland.co/phpmyadmin/' target='_blank'>online EMAR</a></caption><tr><th>Patient Name</th><th>Medication</th><th>Dose</th><th>Unit</th><th>Date Time Given</th><th>Symptoms</th><th>Temperature (F)</th><th></th></tr>";
 echo "<form name='p_list' action='emar_post.php' method='post'>";
 
 echo "<tr><td><select id='namequery' name='namequery'>";
