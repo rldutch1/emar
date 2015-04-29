@@ -1,9 +1,8 @@
 <?php
 //include('../includes/pw5new.php');
-include('connect.php');
-include('../php1/includes/functions.php');
+include_once('connect_pdo.php');
+//include('../php1/includes/functions.php');
 
-//echo "\r\n <br /> Holland \r\n <br />";
 echo "<html>
 <head>
 <title></title>
@@ -16,9 +15,9 @@ echo "<br /><hr /><table border='1'><caption><a href='http://www.robholland.co/p
 echo "<form name='p_list' action='emar_post.php' method='post'>";
 
 echo "<tr><td><select id='namequery' name='namequery'>";
-$namequery="select
+$namequery = $handler->query("select
 				id
-				, concat(firstname,' ',lastname)
+				, concat(firstname,' ',lastname) as name
 				, birth_date
 				, birth_city
 				, birth_state
@@ -26,55 +25,48 @@ $namequery="select
 				from
 					h_person
 				where active_ind = 1
-				order by firstname, lastname;";
-		$nameresult=mysqli_query($con, $namequery);
-			confirm_queryi($nameresult);
-		$arraydata1 = array();
+				order by firstname, lastname;");
+
 			echo "<option selected='selected' value='0'>Select</option>";
-			while($row = mysqli_fetch_array($nameresult)){
-			echo "<option value='" . $row[0] . "'>" . $row[1] . "</option>";
+			while($r = $namequery->fetch(PDO::FETCH_OBJ)){
+			echo "<option value='" . $r->id . "'>" . $r->name . "</option>";
 			}
 			echo "</select></td>";
 
 echo "<td><select id='medquery' name='medquery'>";
-$medquery="select
+
+$medquery = $handler->query('select
 				id
 				, medication
 				from
 					h_med
 				where active_ind = 1
-				order by medication;";
-		$medresult=mysqli_query($con, $medquery);
-			confirm_queryi($medresult);
-		$arraydata1 = array();
+				order by medication;');
+
 			echo "<option selected='selected' value='0'>Select Medication</option>";
-			while($row = mysqli_fetch_array($medresult)){
-			echo "<option value='" . $row[0] . "'>" . $row[1] . "</option>";
+			while($r = $medquery->fetch(PDO::FETCH_OBJ)){
+			echo "<option value='" . $r->id . "'>" . $r->medication . "</option>";
 			}
 			echo "</select></td>";
 
 echo "<td><input type='text' id='dose' name='dose' value='' /></td>";
 
 echo "<td><select id='unitquery' name='unitquery'>";
-$unitquery="select
+$unitquery = $handler->query('select
 				id
 				, unit
 				from
 					h_unit
 				where active_ind = 1
-				order by unit;";
-		$unitresult=mysqli_query($con, $unitquery);
-			confirm_queryi($unitresult);
-		$arraydata1 = array();
+				order by unit;');
 
 			echo "<option selected='selected' value='0'>Select Unit</option>";
-			while($row = mysqli_fetch_array($unitresult)){
-			echo "<option value='" . $row[0] . "'>" . $row[1] . "</option>";
+			while($r = $unitquery->fetch(PDO::FETCH_OBJ)){
+			echo "<option value='" . $r->id . "'>" . $r->unit . "</option>";
 			}
 			echo "</select></td>";
 
 echo "<td><input type='text' id='admindate' name='admindate' size='30' /></td>";
-//echo "<td><input type='text' id='basic_example_1' name='basic_example_1' /></td>";
 
 echo "<td><input type='text' id='symptom' name='symptom' /></td>";
 
