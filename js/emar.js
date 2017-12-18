@@ -8,7 +8,7 @@ $(function()
 	$('#admindate').datetimepicker(
         {
 	addSliderAccess: true,
-//	sliderAccessArgs: { touchonly: true }, //true adds the + and - buttons.
+	//sliderAccessArgs: { touchonly: true }, //true adds the + and - buttons.
 	sliderAccessArgs: false,
 	dateFormat: "yy-mm-dd ",
 	timeFormat: "HH:mm:ss ",
