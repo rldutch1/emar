@@ -1,6 +1,6 @@
 <?php
 //include('../includes/pw5new.php');
-include_once('connect_pdo.php');
+include_once('connect.php');
 //include('../php1/includes/functions.php');
 
 echo "<html>
@@ -11,7 +11,16 @@ echo "<html>
 <link rel='stylesheet' type='text/css' href='css/jquery-ui-1.10.3.custom.css'>
 <link rel='stylesheet' type='text/css' href='css/emar.css'>
 </head><body>";
-echo "<br /><hr /><table border='1'><caption><a href='http://www.robholland.co/phpmyadmin/' target='_blank'>online EMAR</a></caption><tr><th>Patient Name</th><th>Medication</th><th>Dose</th><th>Unit</th><th>Date Time Given</th><th>Symptoms</th><th>Temperature (F)</th><th></th></tr>";
+echo "<br /><hr /><table border='1'>
+<caption><a href='http://www.robholland.co/phpmyadmin/' target='_blank'>online EMAR</a></caption>
+<tr><th><input type='button' name='ptname' value='Patient Name'></th>
+<th><input type='button' name='medname' value='Medication'></th>
+<th>Dose</th>
+<th><input type='button' name='unit' value='Unit'></th>
+<th>Date Time Given</th>
+<th>Symptoms</th>
+<th>Temperature (F)</th>
+<th></th></tr>";
 echo "<form name='p_list' action='emar_post.php' method='post'>";
 
 echo "<tr><td><select id='namequery' name='namequery'>";
@@ -82,5 +91,3 @@ echo "<div id='emardisplay'></div>";
 include('jsfooter.php');
 			echo "</body></html>";
 ?>
-
-
