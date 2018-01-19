@@ -1,7 +1,7 @@
 <?php
 $db_server = 'localhost';
 $db_user = 'emar';
-$db_password = 'emar';
+$db_password = 'emaremar';
 $db_dbname = 'emar';
 
 $con=mysqli_connect($db_server, $db_user, $db_password, $db_dbname);
