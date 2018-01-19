@@ -1,15 +1,16 @@
 <?php
-$db_server = 'localhost';
-$db_user = 'emar';
-$db_password = 'emar1234!';
-$db_dbname = 'emar';
-
-$con=mysqli_connect($db_server, $db_user, $db_password, $db_dbname);
-/* Connection checking is done with the confirm_queryi function in functions.php
-// Check connection
-if (mysqli_connect_errno())
-  {
-  echo "Failed to connect to MySQL: " . mysqli_connect_error();
-  }
-*/
+if(!session_id()) session_start(); //If session has not been started, start it.
+//PDO Connect method: MySQL PDO Tutorial Lesson 1 - Connection
+//PDO Try/Catch method: MySQL PDO Tutorial Lesson 2 - Error catching
+try {
+	$handler = new PDO('mysql:host=localhost;dbname=emar;', 'emar', 'emaremar'); //Setting the handler. See next line if this line fails.
+	$handler->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //Setting the attributes for the handler that we want to see if exception error.
+}
+//global $handler
+catch(PDOException $e) { //Return the PDO exception and naming it $e.
+//	echo 'Caught';
+//	die('Sorry database problem.'); //Production message.
+	echo $e->getMessage(); //Show specific error message. Development.
+}
+//DO NOT PUT A SPACE AFTER THE END TAG. YOU WILL SEE HEADER ALREADY SENT MESSAGES.
 ?>
