@@ -43,13 +43,13 @@ echo "<div><table border='1'><caption>Medication Administration Record</caption>
 echo "<tr><th>Patient</th><th>Medication</th><th>Dose/Unit</th><th>Date Time</th><th>Temp Fehrenheit</th><th>Temp Celcius</th><th>Symptom(s)</th></tr>";
 			while($row=$select_vwhsum->fetch(PDO::FETCH_ASSOC)){
 				//echo "<pre>" . var_dump($row) . "</pre>";
-				$person = htmlentities($row['person']);
-				$medication = htmlentities($row['medication']);
-				$dose_unit = htmlentities($row['dose_unit']);
-				$admin_dttm = htmlentities($row['admin_dttm']);
-				$temp_f = htmlentities($row['temp_f']);
-				$temp_c = htmlentities($row['temp_c']);
-				$symptom = htmlentities($row['symptom']);
+				$person = htmlspecialchars($row['person']);
+				$medication = htmlspecialchars($row['medication']);
+				$dose_unit = htmlspecialchars($row['dose_unit']);
+				$admin_dttm = htmlspecialchars($row['admin_dttm']);
+				$temp_f = htmlspecialchars($row['temp_f']);
+				$temp_c = htmlspecialchars($row['temp_c']);
+				$symptom = htmlspecialchars($row['symptom']);
 echo "<tr><td>" . $person . "</td><td>" . $medication . "</td><td>" . $dose_unit . "</td><td>" . $admin_dttm . "</td><td>" . $temp_f . "</td><td>" . $temp_c . "</td><td>" . $symptom . "</td></tr>";
 			}
 echo "</table></div>";
