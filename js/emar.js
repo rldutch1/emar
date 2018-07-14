@@ -157,7 +157,7 @@ else if (isNaN(x7)==true || x7 < 0 || x7 == "")
 //Example: http://www.robholland.com/disneymovies.html
 }
 
-function showUser(str) {
+function showUser(str) { //onselect_pdo.php
     if (str == '') {
         document.getElementById('txtHint').innerHTML = '';
         return;
@@ -179,4 +179,3 @@ function showUser(str) {
         xmlhttp.send();
     }
 }
-
